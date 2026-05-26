@@ -1,0 +1,2053 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>איך הופכים 200,000 ש"ח לדירה ראשונה להשקעה? | קיין יזמות נדל"ן</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;500;600;700;800&family=Heebo:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    /* === צבעי ברנד קיין === */
+    --navy-deep: #1A1B5C;          /* כחול-סגול עמוק - רקע ראשי */
+    --navy-mid: #2D2E7A;            /* גוון בינוני */
+    --navy-light: #3F40A0;          /* גוון בהיר יותר */
+    --teal: #14B8A6;                /* טורקיז ראשי */
+    --teal-bright: #2DD4BF;         /* טורקיז זוהר */
+    --teal-dark: #0D9488;           /* טורקיז כהה */
+    --purple-light: #A78BFA;        /* סגול בהיר - כפתורים */
+    --purple-mid: #8B5CF6;          /* סגול בינוני */
+    --purple-soft: #C4B5FD;         /* סגול עדין */
+
+    --white: #FFFFFF;
+    --cream: #FAF9FF;
+    --gray-100: #F3F4F6;
+    --gray-300: #D1D5DB;
+    --gray-500: #6B7280;
+    --gray-700: #374151;
+    --green: #10B981;
+    --red: #EF4444;
+
+    --shadow-sm: 0 4px 12px rgba(26, 27, 92, 0.08);
+    --shadow-md: 0 10px 30px rgba(26, 27, 92, 0.12);
+    --shadow-lg: 0 25px 60px rgba(26, 27, 92, 0.18);
+    --shadow-glow: 0 10px 40px rgba(20, 184, 166, 0.3);
+    --shadow-purple: 0 10px 40px rgba(167, 139, 250, 0.4);
+  }
+
+  html, body { overflow-x: hidden; }
+
+  body {
+    font-family: 'Assistant', sans-serif;
+    background: var(--navy-deep);
+    background-image:
+      radial-gradient(ellipse at 20% 0%, rgba(63, 64, 160, 0.4) 0%, transparent 50%),
+      radial-gradient(ellipse at 80% 100%, rgba(20, 184, 166, 0.15) 0%, transparent 50%),
+      radial-gradient(ellipse at 50% 50%, rgba(139, 92, 246, 0.1) 0%, transparent 70%);
+    background-attachment: fixed;
+    min-height: 100vh;
+    color: var(--white);
+    line-height: 1.6;
+    position: relative;
+  }
+
+  /* רקע גיאומטרי דקורטיבי */
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background-image:
+      linear-gradient(45deg, transparent 48%, rgba(255,255,255,0.02) 49%, rgba(255,255,255,0.02) 51%, transparent 52%),
+      linear-gradient(-45deg, transparent 48%, rgba(255,255,255,0.02) 49%, rgba(255,255,255,0.02) 51%, transparent 52%);
+    background-size: 60px 60px;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  /* צורות צפות */
+  .floating-shape {
+    position: fixed;
+    pointer-events: none;
+    z-index: 0;
+    opacity: 0.6;
+  }
+  .shape-1 {
+    top: 10%;
+    left: -50px;
+    width: 200px;
+    height: 200px;
+    background: linear-gradient(135deg, var(--purple-light) 0%, var(--purple-mid) 100%);
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    filter: blur(40px);
+    animation: float-1 20s ease-in-out infinite;
+  }
+  .shape-2 {
+    bottom: 15%;
+    right: -80px;
+    width: 280px;
+    height: 280px;
+    background: linear-gradient(135deg, var(--teal) 0%, var(--teal-bright) 100%);
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    filter: blur(60px);
+    animation: float-2 25s ease-in-out infinite;
+  }
+  .shape-3 {
+    top: 50%;
+    left: 50%;
+    width: 150px;
+    height: 150px;
+    background: var(--purple-soft);
+    transform: translate(-50%, -50%) rotate(45deg);
+    filter: blur(50px);
+    opacity: 0.3;
+    animation: float-3 30s ease-in-out infinite;
+  }
+
+  @keyframes float-1 {
+    0%, 100% { transform: translate(0, 0) rotate(0deg); }
+    50% { transform: translate(30px, 50px) rotate(180deg); }
+  }
+  @keyframes float-2 {
+    0%, 100% { transform: translate(0, 0) rotate(0deg); }
+    50% { transform: translate(-50px, -30px) rotate(-180deg); }
+  }
+  @keyframes float-3 {
+    0%, 100% { transform: translate(-50%, -50%) rotate(45deg); }
+    50% { transform: translate(-30%, -70%) rotate(225deg); }
+  }
+
+  .container {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 24px 20px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+  }
+
+  /* === Logo === */
+  .logo-bar {
+    text-align: center;
+    padding: 16px 0 28px;
+  }
+  .logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    font-weight: 800;
+    font-size: 22px;
+    color: var(--white);
+    letter-spacing: -0.5px;
+  }
+  .logo-icon {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, var(--teal) 0%, var(--teal-bright) 100%);
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--navy-deep);
+    font-weight: 900;
+    font-size: 24px;
+    box-shadow: var(--shadow-glow), inset 0 -3px 8px rgba(0,0,0,0.2);
+    transform: rotate(-5deg);
+    transition: transform 0.3s ease;
+  }
+  .logo:hover .logo-icon {
+    transform: rotate(0deg) scale(1.05);
+  }
+
+  /* === Card === */
+  .card {
+    background: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(20px);
+    border-radius: 28px;
+    padding: 44px;
+    box-shadow: var(--shadow-lg), 0 0 0 1px rgba(255, 255, 255, 0.1);
+    color: var(--gray-700);
+    animation: cardEntry 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--teal) 0%, var(--purple-light) 50%, var(--teal-bright) 100%);
+  }
+
+  @keyframes cardEntry {
+    from { opacity: 0; transform: translateY(30px) scale(0.96); }
+    to { opacity: 1; transform: translateY(0) scale(1); }
+  }
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  @keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+  }
+  @keyframes shimmer {
+    0% { background-position: -200% 0; }
+    100% { background-position: 200% 0; }
+  }
+
+  /* === מסך פתיחה === */
+  .welcome { text-align: center; }
+  .welcome-eyebrow {
+    display: inline-block;
+    color: var(--teal-dark);
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 2px;
+    margin-bottom: 16px;
+    text-transform: uppercase;
+    font-family: 'Heebo', sans-serif;
+  }
+  .welcome h1 {
+    font-family: 'Heebo', sans-serif;
+    font-size: 42px;
+    font-weight: 900;
+    line-height: 1.15;
+    margin-bottom: 18px;
+    color: var(--navy-deep);
+    letter-spacing: -1px;
+  }
+  .welcome h1 .highlight {
+    background: linear-gradient(135deg, var(--teal) 0%, var(--teal-bright) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    position: relative;
+    display: inline-block;
+  }
+  .welcome h1 .highlight::after {
+    content: "";
+    position: absolute;
+    bottom: 4px;
+    left: 0;
+    right: 0;
+    height: 8px;
+    background: var(--teal);
+    opacity: 0.15;
+    z-index: -1;
+    border-radius: 4px;
+  }
+  .welcome .subtitle {
+    font-size: 17px;
+    color: var(--gray-500);
+    margin-bottom: 32px;
+    max-width: 540px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
+  }
+  .stats-row {
+    display: flex;
+    justify-content: center;
+    gap: 0;
+    margin-bottom: 28px;
+    background: linear-gradient(135deg, rgba(20, 184, 166, 0.05) 0%, rgba(167, 139, 250, 0.05) 100%);
+    border-radius: 18px;
+    border: 1px solid rgba(20, 184, 166, 0.15);
+    overflow: hidden;
+  }
+  .stat {
+    text-align: center;
+    flex: 1;
+    padding: 18px 12px;
+    border-left: 1px solid rgba(20, 184, 166, 0.15);
+  }
+  .stat:last-child { border-left: none; }
+  .stat-num {
+    font-family: 'Heebo', sans-serif;
+    font-size: 26px;
+    font-weight: 900;
+    background: linear-gradient(135deg, var(--navy-deep) 0%, var(--purple-mid) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    line-height: 1;
+  }
+  .stat-label {
+    font-size: 12px;
+    color: var(--gray-500);
+    margin-top: 6px;
+    font-weight: 500;
+  }
+  .social-proof {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 28px;
+    color: var(--gray-500);
+    font-size: 14px;
+  }
+  .avatars { display: flex; }
+  .avatar {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--purple-light) 0%, var(--purple-mid) 100%);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 13px;
+    border: 2px solid white;
+    margin-left: -10px;
+    box-shadow: 0 2px 8px rgba(139, 92, 246, 0.3);
+  }
+  .avatar:nth-child(2) { background: linear-gradient(135deg, var(--teal) 0%, var(--teal-bright) 100%); }
+  .avatar:nth-child(3) { background: linear-gradient(135deg, var(--navy-mid) 0%, var(--navy-light) 100%); }
+  .avatar:first-child { margin-left: 0; }
+
+  /* === Buttons === */
+  .btn-primary {
+    background: linear-gradient(135deg, var(--purple-light) 0%, var(--purple-mid) 100%);
+    color: white;
+    border: none;
+    padding: 18px 48px;
+    font-size: 17px;
+    font-weight: 700;
+    border-radius: 14px;
+    cursor: pointer;
+    font-family: inherit;
+    transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+    box-shadow: var(--shadow-purple);
+    width: 100%;
+    max-width: 380px;
+    position: relative;
+    overflow: hidden;
+  }
+  .btn-primary::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+    transition: left 0.6s ease;
+  }
+  .btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 40px rgba(139, 92, 246, 0.5);
+  }
+  .btn-primary:hover::before { left: 100%; }
+  .btn-primary:disabled { opacity: 0.5; cursor: not-allowed; transform: none; }
+
+  .btn-teal {
+    background: linear-gradient(135deg, var(--teal) 0%, var(--teal-dark) 100%);
+    box-shadow: var(--shadow-glow);
+  }
+  .btn-teal:hover {
+    box-shadow: 0 15px 40px rgba(20, 184, 166, 0.5);
+  }
+
+  .small-text {
+    font-size: 13px;
+    color: var(--gray-500);
+    margin-top: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+  }
+
+  /* === Progress bar === */
+  .progress-section { margin-bottom: 36px; }
+  .progress-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+    font-size: 13px;
+    color: var(--gray-500);
+    font-weight: 600;
+  }
+  .progress-info .step-num { color: var(--navy-deep); font-weight: 700; }
+  .progress-info .pct {
+    background: linear-gradient(135deg, var(--teal) 0%, var(--purple-light) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 800;
+  }
+  .progress-bar {
+    height: 10px;
+    background: var(--gray-100);
+    border-radius: 100px;
+    overflow: hidden;
+    position: relative;
+  }
+  .progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--teal) 0%, var(--purple-light) 100%);
+    border-radius: 100px;
+    transition: width 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    width: 0%;
+    position: relative;
+    box-shadow: 0 0 12px rgba(20, 184, 166, 0.5);
+  }
+  .progress-fill::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+    background-size: 200% 100%;
+    animation: shimmer 2s infinite;
+  }
+
+  /* === שאלה === */
+  .question-block { animation: cardEntry 0.4s ease; }
+  .question-icon {
+    font-size: 40px;
+    margin-bottom: 14px;
+    display: inline-block;
+    animation: pulse 2s ease infinite;
+  }
+  .question-title {
+    font-family: 'Heebo', sans-serif;
+    font-size: 28px;
+    font-weight: 800;
+    line-height: 1.3;
+    margin-bottom: 10px;
+    color: var(--navy-deep);
+    letter-spacing: -0.5px;
+  }
+  .question-hint {
+    font-size: 14px;
+    color: var(--gray-500);
+    margin-bottom: 30px;
+  }
+  .options {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 30px;
+  }
+  .option {
+    background: var(--cream);
+    border: 2px solid transparent;
+    padding: 18px 22px;
+    border-radius: 14px;
+    cursor: pointer;
+    text-align: right;
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--gray-700);
+    font-family: inherit;
+    transition: all 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    position: relative;
+    overflow: hidden;
+  }
+  .option::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(20, 184, 166, 0.06) 0%, rgba(167, 139, 250, 0.06) 100%);
+    opacity: 0;
+    transition: opacity 0.25s;
+  }
+  .option:hover {
+    background: white;
+    border-color: var(--teal);
+    transform: translateX(-4px);
+    box-shadow: 0 4px 16px rgba(20, 184, 166, 0.15);
+  }
+  .option:hover::before { opacity: 1; }
+  .option.selected {
+    background: white;
+    border-color: var(--purple-mid);
+    color: var(--navy-deep);
+    box-shadow: 0 4px 20px rgba(139, 92, 246, 0.25);
+  }
+  .option.selected::before {
+    background: linear-gradient(135deg, rgba(167, 139, 250, 0.1) 0%, rgba(20, 184, 166, 0.05) 100%);
+    opacity: 1;
+  }
+  .option > * { position: relative; z-index: 1; }
+  .option-check {
+    width: 24px;
+    height: 24px;
+    border: 2px solid var(--gray-300);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: all 0.25s;
+  }
+  .option.selected .option-check {
+    background: linear-gradient(135deg, var(--purple-light) 0%, var(--purple-mid) 100%);
+    border-color: var(--purple-mid);
+  }
+  .option.selected .option-check::after {
+    content: "✓";
+    color: white;
+    font-weight: 800;
+    font-size: 14px;
+  }
+
+  .nav-buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+  }
+  .btn-next {
+    background: linear-gradient(135deg, var(--teal) 0%, var(--teal-dark) 100%);
+    color: white;
+    border: none;
+    padding: 14px 36px;
+    font-size: 15px;
+    font-weight: 700;
+    border-radius: 12px;
+    cursor: pointer;
+    font-family: inherit;
+    transition: all 0.25s;
+    box-shadow: var(--shadow-glow);
+  }
+  .btn-next:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 28px rgba(20, 184, 166, 0.5);
+  }
+  .btn-next:disabled { opacity: 0.4; cursor: not-allowed; transform: none; box-shadow: none; }
+  .btn-back {
+    background: transparent;
+    color: var(--gray-500);
+    border: none;
+    padding: 12px 20px;
+    font-size: 15px;
+    cursor: pointer;
+    font-family: inherit;
+    font-weight: 500;
+    transition: color 0.2s;
+  }
+  .btn-back:hover { color: var(--navy-deep); }
+
+  /* === Loading === */
+  .loading-screen { text-align: center; padding: 30px 20px; }
+  .loading-icon {
+    width: 90px;
+    height: 90px;
+    margin: 0 auto 32px;
+    position: relative;
+  }
+  .loading-icon::before, .loading-icon::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    border: 4px solid transparent;
+  }
+  .loading-icon::before {
+    border-top-color: var(--teal);
+    border-right-color: var(--teal-bright);
+    animation: spin 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  }
+  .loading-icon::after {
+    border-bottom-color: var(--purple-light);
+    border-left-color: var(--purple-mid);
+    animation: spin 1.8s cubic-bezier(0.5, 0, 0.5, 1) infinite reverse;
+  }
+  @keyframes spin { to { transform: rotate(360deg); } }
+  .loading-screen h2 {
+    font-family: 'Heebo', sans-serif;
+    font-size: 28px;
+    margin-bottom: 28px;
+    color: var(--navy-deep);
+    font-weight: 800;
+  }
+  .loading-steps { text-align: right; max-width: 400px; margin: 0 auto 24px; }
+  .loading-step {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 14px 0;
+    color: var(--gray-500);
+    opacity: 0.4;
+    transition: all 0.4s ease;
+  }
+  .loading-step.active { opacity: 1; color: var(--navy-deep); transform: translateX(-4px); }
+  .loading-step.done { opacity: 1; color: var(--teal-dark); }
+  .loading-step-icon {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: var(--gray-100);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--gray-500);
+    font-size: 13px;
+    font-weight: 700;
+    flex-shrink: 0;
+    transition: all 0.4s;
+  }
+  .loading-step.active .loading-step-icon {
+    background: linear-gradient(135deg, var(--purple-light) 0%, var(--purple-mid) 100%);
+    color: white;
+  }
+  .loading-step.done .loading-step-icon {
+    background: linear-gradient(135deg, var(--teal) 0%, var(--teal-dark) 100%);
+    color: white;
+  }
+  .loading-tip {
+    background: linear-gradient(135deg, rgba(20, 184, 166, 0.08) 0%, rgba(167, 139, 250, 0.08) 100%);
+    padding: 18px 22px;
+    border-radius: 14px;
+    font-size: 14px;
+    color: var(--navy-deep);
+    margin-top: 24px;
+    border-right: 4px solid var(--teal);
+    text-align: right;
+    line-height: 1.6;
+  }
+  .loading-tip strong { color: var(--purple-mid); }
+
+  /* === Result === */
+  .result-header {
+    text-align: center;
+    padding: 20px 0 30px;
+    border-bottom: 2px dashed var(--gray-100);
+    margin-bottom: 32px;
+    position: relative;
+  }
+  .result-emoji {
+    font-size: 64px;
+    margin-bottom: 14px;
+    display: inline-block;
+    animation: pulse 2s ease infinite;
+    filter: drop-shadow(0 8px 24px rgba(139, 92, 246, 0.3));
+  }
+  .result-label {
+    color: var(--gray-500);
+    font-size: 13px;
+    margin-bottom: 8px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+  .result-profile {
+    font-family: 'Heebo', sans-serif;
+    font-size: 32px;
+    font-weight: 900;
+    color: var(--navy-deep);
+    margin-bottom: 12px;
+    letter-spacing: -0.5px;
+  }
+  .result-tagline {
+    font-size: 16px;
+    color: var(--gray-500);
+    max-width: 500px;
+    margin: 0 auto;
+    line-height: 1.6;
+  }
+
+  .insights {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-bottom: 32px;
+  }
+  .insight {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 20px;
+    background: var(--cream);
+    border-radius: 16px;
+    border: 1px solid rgba(167, 139, 250, 0.1);
+    transition: all 0.3s;
+  }
+  .insight:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+  }
+  .insight-icon {
+    width: 44px;
+    height: 44px;
+    background: linear-gradient(135deg, var(--purple-light) 0%, var(--purple-mid) 100%);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    flex-shrink: 0;
+    box-shadow: 0 4px 12px rgba(139, 92, 246, 0.3);
+  }
+  .insight:nth-child(2) .insight-icon {
+    background: linear-gradient(135deg, var(--teal) 0%, var(--teal-dark) 100%);
+    box-shadow: 0 4px 12px rgba(20, 184, 166, 0.3);
+  }
+  .insight:nth-child(3) .insight-icon {
+    background: linear-gradient(135deg, var(--navy-mid) 0%, var(--navy-light) 100%);
+    box-shadow: 0 4px 12px rgba(45, 46, 122, 0.3);
+  }
+  .insight-content { flex: 1; }
+  .insight-title { font-weight: 700; color: var(--navy-deep); margin-bottom: 4px; font-size: 15px; }
+  .insight-desc { font-size: 14px; color: var(--gray-500); line-height: 1.5; }
+
+  .where-section {
+    background: white;
+    border: 2px solid rgba(20, 184, 166, 0.2);
+    border-radius: 18px;
+    padding: 26px;
+    margin-bottom: 26px;
+    position: relative;
+    overflow: hidden;
+  }
+  .where-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 120px;
+    height: 120px;
+    background: radial-gradient(circle, rgba(20, 184, 166, 0.1) 0%, transparent 70%);
+    border-radius: 50%;
+  }
+  .where-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 18px;
+    padding-bottom: 16px;
+    border-bottom: 2px dashed rgba(20, 184, 166, 0.2);
+    position: relative;
+  }
+  .where-icon {
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(135deg, var(--teal) 0%, var(--teal-bright) 100%);
+    border-radius: 11px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    box-shadow: var(--shadow-glow);
+  }
+  .where-title {
+    font-family: 'Heebo', sans-serif;
+    font-size: 19px;
+    font-weight: 800;
+    color: var(--navy-deep);
+  }
+  .where-list { display: flex; flex-direction: column; gap: 14px; position: relative; }
+  .where-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    font-size: 15px;
+    color: var(--navy-deep);
+    line-height: 1.5;
+  }
+  .where-bullet {
+    width: 30px;
+    height: 30px;
+    background: linear-gradient(135deg, var(--teal) 0%, var(--teal-dark) 100%);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 14px;
+    flex-shrink: 0;
+    box-shadow: 0 3px 10px rgba(20, 184, 166, 0.4);
+  }
+
+  .guide-preview {
+    background: linear-gradient(135deg, var(--navy-deep) 0%, var(--navy-mid) 100%);
+    color: white;
+    padding: 32px;
+    border-radius: 20px;
+    text-align: center;
+    margin-bottom: 26px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 20px 50px rgba(26, 27, 92, 0.4);
+  }
+  .guide-preview::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    right: -20%;
+    width: 250px;
+    height: 250px;
+    background: radial-gradient(circle, rgba(20, 184, 166, 0.4) 0%, transparent 70%);
+  }
+  .guide-preview::after {
+    content: "";
+    position: absolute;
+    bottom: -50%;
+    left: -20%;
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(circle, rgba(167, 139, 250, 0.3) 0%, transparent 70%);
+  }
+  .guide-tag {
+    display: inline-block;
+    background: linear-gradient(135deg, var(--teal) 0%, var(--teal-bright) 100%);
+    color: var(--navy-deep);
+    padding: 6px 16px;
+    border-radius: 100px;
+    font-size: 12px;
+    font-weight: 800;
+    margin-bottom: 14px;
+    position: relative;
+    box-shadow: 0 4px 12px rgba(20, 184, 166, 0.4);
+  }
+  .guide-title {
+    font-family: 'Heebo', sans-serif;
+    font-size: 24px;
+    font-weight: 800;
+    margin-bottom: 10px;
+    position: relative;
+    line-height: 1.3;
+  }
+  .guide-desc { font-size: 14px; opacity: 0.9; position: relative; line-height: 1.6; }
+
+  /* === טופס === */
+  .form-section { text-align: center; }
+  .form-section h2 {
+    font-family: 'Heebo', sans-serif;
+    font-size: 28px;
+    margin-bottom: 8px;
+    color: var(--navy-deep);
+    font-weight: 800;
+  }
+  .form-section .form-sub {
+    color: var(--gray-500);
+    margin-bottom: 32px;
+    font-size: 15px;
+  }
+  .form-fields {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-bottom: 22px;
+    text-align: right;
+  }
+  .form-input {
+    width: 100%;
+    padding: 16px 20px;
+    border: 2px solid var(--gray-100);
+    border-radius: 12px;
+    font-size: 16px;
+    font-family: inherit;
+    transition: all 0.25s;
+    background: var(--cream);
+    color: var(--navy-deep);
+  }
+  .form-input::placeholder { color: var(--gray-500); }
+  .form-input:focus {
+    outline: none;
+    border-color: var(--purple-mid);
+    background: white;
+    box-shadow: 0 0 0 4px rgba(167, 139, 250, 0.15);
+  }
+  .form-input.error { border-color: var(--red); }
+  .form-error { color: var(--red); font-size: 13px; margin-top: -8px; display: none; font-weight: 500; }
+  .form-error.show { display: block; }
+  .checkbox-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    text-align: right;
+    margin-bottom: 22px;
+    font-size: 13px;
+    color: var(--gray-500);
+  }
+  .checkbox-row input { margin-top: 4px; accent-color: var(--purple-mid); }
+  .checkbox-row a { color: var(--purple-mid); text-decoration: underline; font-weight: 600; }
+  .privacy-note {
+    font-size: 12px;
+    color: var(--gray-500);
+    margin-top: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+  }
+
+  /* === מסך הצלחה === */
+  .success-screen { text-align: center; padding: 20px 0; }
+  .success-icon {
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(135deg, var(--teal) 0%, var(--teal-dark) 100%);
+    border-radius: 50%;
+    margin: 0 auto 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 52px;
+    box-shadow: 0 12px 36px rgba(20, 184, 166, 0.4);
+    animation: pulse 2s ease infinite;
+    position: relative;
+  }
+  .success-icon::before {
+    content: "";
+    position: absolute;
+    inset: -8px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--teal) 0%, var(--teal-bright) 100%);
+    opacity: 0.2;
+    z-index: -1;
+    animation: pulse 2s ease infinite 0.3s;
+  }
+  .success-screen h2 {
+    font-family: 'Heebo', sans-serif;
+    font-size: 30px;
+    margin-bottom: 12px;
+    color: var(--navy-deep);
+    font-weight: 800;
+  }
+  .success-screen .success-sub {
+    color: var(--gray-500);
+    margin-bottom: 30px;
+    font-size: 16px;
+    max-width: 440px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
+  }
+  .bonus-box {
+    background: linear-gradient(135deg, var(--navy-deep) 0%, var(--navy-mid) 100%);
+    color: white;
+    padding: 28px;
+    border-radius: 18px;
+    margin-top: 22px;
+    text-align: right;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 15px 40px rgba(26, 27, 92, 0.3);
+  }
+  .bonus-box::before {
+    content: "";
+    position: absolute;
+    top: -30%;
+    left: -10%;
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(circle, rgba(167, 139, 250, 0.25) 0%, transparent 70%);
+  }
+  .bonus-tag {
+    display: inline-block;
+    background: linear-gradient(135deg, var(--teal) 0%, var(--teal-bright) 100%);
+    color: var(--navy-deep);
+    padding: 5px 14px;
+    border-radius: 100px;
+    font-size: 11px;
+    font-weight: 800;
+    margin-bottom: 12px;
+    letter-spacing: 0.5px;
+    position: relative;
+  }
+  .bonus-box h3 {
+    font-family: 'Heebo', sans-serif;
+    font-size: 20px;
+    color: white;
+    margin-bottom: 10px;
+    font-weight: 800;
+    position: relative;
+  }
+  .bonus-box p {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.85);
+    margin-bottom: 16px;
+    line-height: 1.6;
+    position: relative;
+  }
+  .bonus-meta {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 18px;
+    flex-wrap: wrap;
+    position: relative;
+  }
+  .bonus-meta-item { display: flex; align-items: center; gap: 5px; }
+  .btn-bonus {
+    background: linear-gradient(135deg, var(--teal) 0%, var(--teal-bright) 100%);
+    color: var(--navy-deep);
+    padding: 16px 28px;
+    border: none;
+    border-radius: 12px;
+    font-weight: 800;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 16px;
+    width: 100%;
+    transition: all 0.3s;
+    position: relative;
+    box-shadow: var(--shadow-glow);
+  }
+  .btn-bonus:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 16px 40px rgba(20, 184, 166, 0.5);
+  }
+
+  /* === Whatsapp Section === */
+  .whatsapp-section {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px dashed rgba(255, 255, 255, 0.25);
+    text-align: center;
+  }
+  .whatsapp-text {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 14px;
+    margin-bottom: 10px;
+    font-weight: 500;
+  }
+  .btn-whatsapp {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background: #25D366;
+    color: white;
+    padding: 12px 22px;
+    border-radius: 12px;
+    font-weight: 700;
+    font-size: 15px;
+    text-decoration: none;
+    transition: all 0.3s;
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.35);
+    font-family: inherit;
+  }
+  .btn-whatsapp:hover {
+    background: #128C7E;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 28px rgba(37, 211, 102, 0.5);
+  }
+  .wa-icon {
+    font-size: 18px;
+    line-height: 1;
+  }
+
+  /* === Scroll to Form Button (in result) === */
+  .scroll-to-form-btn {
+    margin: 0 auto 28px;
+    display: block;
+    max-width: 400px;
+    width: 100%;
+  }
+
+  /* === Inline Form (merged with result) === */
+  .inline-form {
+    margin-top: 36px;
+    padding: 28px;
+    background: linear-gradient(135deg, rgba(167, 139, 250, 0.05) 0%, rgba(20, 184, 166, 0.04) 100%);
+    border: 2px solid rgba(167, 139, 250, 0.18);
+    border-radius: 20px;
+    scroll-margin-top: 20px;
+  }
+
+  /* === Clean Guide Section === */
+  .guide-section {
+    margin-top: 32px;
+    text-align: center;
+  }
+  .guide-section-title {
+    font-family: 'Heebo', sans-serif;
+    font-size: 22px;
+    font-weight: 800;
+    color: var(--navy-deep);
+    margin-bottom: 6px;
+  }
+  .guide-section-sub {
+    color: var(--gray-700);
+    font-size: 14px;
+    margin-bottom: 18px;
+  }
+  .pdf-frame-clean {
+    width: 100%;
+    height: 700px;
+    border: 0;
+    display: block;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(26, 27, 92, 0.08);
+  }
+  .btn-download-link {
+    display: inline-block;
+    color: var(--purple-light);
+    padding: 12px 20px;
+    margin-top: 14px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    transition: all 0.2s;
+  }
+  .btn-download-link:hover {
+    color: var(--purple);
+    text-decoration: underline;
+  }
+  @media (max-width: 600px) {
+    .pdf-frame-clean {
+      height: 520px;
+    }
+  }
+
+  /* === Share Section === */
+  .share-section {
+    margin-top: 20px;
+    margin-bottom: 8px;
+    text-align: center;
+  }
+  .btn-share {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background: linear-gradient(135deg, #A78BFA 0%, #8B5CF6 100%);
+    color: white;
+    padding: 14px 28px;
+    border-radius: 12px;
+    font-weight: 700;
+    font-size: 15px;
+    text-decoration: none;
+    transition: all 0.3s;
+    border: none;
+    font-family: inherit;
+    box-shadow: 0 6px 20px rgba(139, 92, 246, 0.35);
+  }
+  .btn-share:hover {
+    background: linear-gradient(135deg, #8B5CF6 0%, #7C3AED 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 28px rgba(139, 92, 246, 0.5);
+  }
+
+  /* === Small Actions (under bonus-box) === */
+  .small-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 16px;
+  }
+  .btn-small {
+    background: rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.9);
+    padding: 9px 14px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 500;
+    text-decoration: none;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    cursor: pointer;
+    font-family: inherit;
+    text-align: center;
+    transition: all 0.2s;
+  }
+  .btn-small:hover:not(:disabled) {
+    background: rgba(255, 255, 255, 0.18);
+    border-color: rgba(255, 255, 255, 0.3);
+  }
+  .btn-small-whatsapp {
+    color: #25D366;
+    border-color: rgba(37, 211, 102, 0.3);
+    background: rgba(37, 211, 102, 0.1);
+  }
+  .btn-small-whatsapp:hover {
+    background: rgba(37, 211, 102, 0.2);
+    border-color: rgba(37, 211, 102, 0.5);
+  }
+  .btn-small-decline.declined {
+    background: rgba(167, 139, 250, 0.18);
+    color: #A78BFA;
+    cursor: default;
+  }
+  .btn-small-decline:disabled {
+    cursor: default;
+  }
+
+  /* === Live Notifications (חדש!) === */
+  .live-notif {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    background: white;
+    border-radius: 14px;
+    padding: 14px 18px;
+    box-shadow: 0 12px 40px rgba(26, 27, 92, 0.25);
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    z-index: 1000;
+    max-width: 320px;
+    transform: translateX(120%);
+    transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+    border: 1px solid rgba(20, 184, 166, 0.2);
+    border-right: 4px solid var(--teal);
+  }
+  .live-notif.show { transform: translateX(0); }
+  .live-notif-avatar {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--purple-light) 0%, var(--purple-mid) 100%);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 16px;
+    flex-shrink: 0;
+    box-shadow: 0 4px 12px rgba(139, 92, 246, 0.3);
+    position: relative;
+  }
+  .live-notif-avatar::after {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    right: -2px;
+    width: 12px;
+    height: 12px;
+    background: var(--teal-bright);
+    border-radius: 50%;
+    border: 2px solid white;
+    animation: pulse 1.5s ease infinite;
+  }
+  .live-notif-content { flex: 1; min-width: 0; }
+  .live-notif-name { font-weight: 700; color: var(--navy-deep); font-size: 14px; margin-bottom: 2px; }
+  .live-notif-action { font-size: 12px; color: var(--gray-500); line-height: 1.4; }
+  .live-notif-action strong { color: var(--purple-mid); font-weight: 600; }
+  .live-notif-time {
+    font-size: 11px;
+    color: var(--gray-500);
+    margin-top: 4px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+  .live-notif-time::before {
+    content: "•";
+    color: var(--teal);
+    font-size: 16px;
+    line-height: 0;
+  }
+
+  /* === Disclaimer === */
+  .disclaimer {
+    text-align: center;
+    font-size: 11px;
+    color: rgba(255, 255, 255, 0.5);
+    margin-top: 32px;
+    padding: 0 20px;
+    line-height: 1.6;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    z-index: 1;
+  }
+
+  /* === Mobile === */
+  @media (max-width: 600px) {
+    .container { padding: 16px 12px; }
+    .card { padding: 28px 20px; border-radius: 22px; }
+    .welcome h1 { font-size: 28px; }
+    .welcome .subtitle { font-size: 15px; }
+    .question-title { font-size: 22px; }
+    .stats-row { gap: 0; }
+    .stat { padding: 14px 8px; }
+    .stat-num { font-size: 20px; }
+    .result-profile { font-size: 26px; }
+    .form-section h2 { font-size: 24px; }
+    .guide-title { font-size: 20px; }
+    .live-notif {
+      bottom: 12px;
+      right: 12px;
+      left: 12px;
+      max-width: none;
+    }
+    .floating-shape { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<div class="floating-shape shape-1"></div>
+<div class="floating-shape shape-2"></div>
+<div class="floating-shape shape-3"></div>
+
+<div class="container">
+
+  <div class="logo-bar">
+    <div class="logo">
+      <div class="logo-icon">ק</div>
+      <div>קיין יזמות נדל"ן</div>
+    </div>
+  </div>
+
+  <div id="app"></div>
+
+  <div class="disclaimer">
+    התוכן באתר זה הוא לצרכי מידע והעשרה כללית בלבד, ואינו מהווה ייעוץ נדל"ני, ייעוץ השקעות או המלצה לביצוע פעולה כלשהי. כל החלטה הינה באחריות המשתמש בלבד. מומלץ להיוועץ עם אנשי מקצוע מוסמכים לפני קבלת החלטה.
+  </div>
+
+</div>
+
+<div class="live-notif" id="liveNotif">
+  <div class="live-notif-avatar" id="liveAvatar">ר</div>
+  <div class="live-notif-content">
+    <div class="live-notif-name" id="liveName">רון מ.</div>
+    <div class="live-notif-action">קיבל/ה <strong id="liveProfile">תכנית עבודה אישית</strong></div>
+    <div class="live-notif-time" id="liveTime">לפני 2 דקות</div>
+  </div>
+</div>
+
+<script>
+// === נתוני שאלון ===
+const questions = [
+  {
+    icon: "👫",
+    title: "מה המצב המשפחתי שלכם?",
+    hint: "זה עוזר לנו להתאים את האסטרטגיה",
+    type: "single",
+    key: "family",
+    options: [
+      { text: "זוג צעיר ללא ילדים", value: "couple_no_kids" },
+      { text: "זוג עם ילד אחד / שניים", value: "couple_kids" },
+      { text: "אחר (רווק/ה, גרוש/ה, משפחה גדולה)", value: "other" }
+    ]
+  },
+  {
+    icon: "📍",
+    title: "איפה אתם גרים היום?",
+    hint: "המיקום משפיע על האסטרטגיה",
+    type: "single",
+    key: "location",
+    options: [
+      { text: "ירושלים והסביבה", value: "jerusalem" },
+      { text: "יהודה ושומרון", value: "judea_samaria" },
+      { text: "מרכז", value: "center" },
+      { text: "אזור אחר בארץ", value: "other_location" }
+    ]
+  },
+  {
+    icon: "💼",
+    title: "מה הסטטוס התעסוקתי שלכם?",
+    hint: "זה משפיע על אפשרויות המימון והמשכנתא",
+    type: "single",
+    key: "employment",
+    options: [
+      { text: "שכיר/ה", value: "employee" },
+      { text: "עצמאי/ת", value: "self_employed" },
+      { text: "אחד שכיר ואחד עצמאי", value: "mixed" },
+      { text: "אחר (סטודנט, אבטלה זמנית, פנסיונר)", value: "other_employment" }
+    ]
+  },
+  {
+    icon: "💰",
+    title: "כמה הון פנוי יש לכם להשקעה?",
+    hint: "כולל חיסכון, פיקדונות, קופת גמל להשקעה, סיוע מההורים",
+    type: "single",
+    key: "capital",
+    options: [
+      { text: "פחות מ-150,000 ש\"ח", value: "100_200k" },
+      { text: "150,000 - 250,000 ש\"ח", value: "150_250k" },
+      { text: "250,000 - 350,000 ש\"ח", value: "200_350k" },
+      { text: "מעל 350,000 ש\"ח", value: "above_350k" }
+    ]
+  },
+  {
+    icon: "📈",
+    title: "כמה אתם מצליחים לחסוך כל חודש?",
+    hint: "אחרי כל ההוצאות, מה נשאר בצד",
+    type: "single",
+    key: "monthlySaving",
+    options: [
+      { text: "עד 1,000 ש\"ח", value: "under_1k" },
+      { text: "1,000 - 2,000 ש\"ח", value: "1_2k" },
+      { text: "2,000 - 3,500 ש\"ח", value: "2_35k" },
+      { text: "מעל 3,500 ש\"ח", value: "above_35k" }
+    ]
+  },
+  {
+    icon: "🎓",
+    title: "מה רמת הידע שלכם בהשקעות?",
+    hint: "תהיו כנים - אין תשובה נכונה או לא נכונה",
+    type: "single",
+    key: "knowledge",
+    options: [
+      { text: "מתחיל - לא מבין הרבה", value: "beginner" },
+      { text: "בינוני - מכיר את הבסיס", value: "intermediate" },
+      { text: "מתקדם - משקיע באופן פעיל", value: "advanced" }
+    ]
+  },
+  {
+    icon: "🏦",
+    title: "איפה הכסף שלכם נמצא היום?",
+    hint: "אפשר לבחור יותר מתשובה אחת",
+    type: "multi",
+    key: "moneyLocation",
+    options: [
+      { text: "בעו\"ש או פיקדון בנקאי", value: "bank" },
+      { text: "בקופת גמל להשקעה", value: "investment_fund" },
+      { text: "בקרן השתלמות", value: "education_fund" },
+      { text: "בשוק ההון (מניות, אג\"ח, ETF)", value: "stocks" },
+      { text: "ב-2 מקומות לפחות מהרשימה למעלה", value: "diversified" }
+    ]
+  },
+  {
+    icon: "🎯",
+    title: "מה המטרה הכי חשובה לכם בעולם ההשקעות?",
+    hint: "בחרו את הסיבה המובילה",
+    type: "single",
+    key: "goal",
+    options: [
+      { text: "התחלה - להפוך כסף שלא עובד למשהו שמייצר", value: "first_step" },
+      { text: "להביא ביטחון כלכלי למשפחה שלנו", value: "security" },
+      { text: "צמיחה - לבנות תיק נכסים שיגדל עם הזמן", value: "growth" },
+      { text: "להגיע לבית החלומות שלנו עם הגינה!!", value: "dream_home" }
+    ]
+  },
+  {
+    icon: "🤔",
+    title: "מה הכי עוצר אתכם היום מלקנות?",
+    hint: "אפשר לבחור יותר מתשובה אחת - היו כנים",
+    type: "multi",
+    key: "blockers",
+    options: [
+      { text: "לא יודע איפה יותר שווה - שוק ההון או נדל\"ן", value: "where_invest" },
+      { text: "מת מפחד שכל הכסף ילך", value: "fear_loss" },
+      { text: "אין לי זמן להתעסק עם רכישת דירה ועם הכאב ראש הזה", value: "no_time" },
+      { text: "אני לא יודע איך לגשת לעולם הענק הזה בכלל", value: "no_knowledge" },
+      { text: "אין לי מספיק כסף להתחיל", value: "not_enough_money" }
+    ]
+  },
+  {
+    icon: "💭",
+    title: "מה הכי מטריד אתכם כשאתם חושבים על העתיד?",
+    hint: "לא חייב להיות כלכלי טהור",
+    type: "single",
+    key: "concern",
+    options: [
+      { text: "גם בעוד 15 שנה נשלם שכירות", value: "still_renting" },
+      { text: "שיהיה לחץ כלכלי בבית ובגידול הילדים", value: "financial_pressure" },
+      { text: "שלא יהיה לי כסף לתת לילדים שלי בחתונה", value: "kids_wedding" },
+      { text: "שאני אמשיך לעבוד כמו חמור כל החיים", value: "endless_work" }
+    ]
+  },
+  {
+    icon: "📅",
+    title: "מתי הייתם רוצים להתחיל בפועל?",
+    hint: "מה ריאלי עבורכם",
+    type: "single",
+    key: "timeline",
+    options: [
+      { text: "תוך 30 יום - אנחנו בשלים ומוכנים", value: "immediate" },
+      { text: "אם תהיה תוכנית פעולה ברורה - אז 1-3 חודשים", value: "soon" },
+      { text: "תוך חצי שנה - אנחנו צריכים לבדוק וללמוד", value: "later" },
+      { text: "לא לחוץ לי שזה יהיה בשנה הקרובה", value: "no_rush" }
+    ]
+  }
+];
+
+function calculateProfile(answers) {
+  const capital = answers.capital;
+  const knowledge = answers.knowledge;
+
+  if (capital === "100_200k" || capital === "150_250k") {
+    return {
+      emoji: "🌱",
+      name: "הזוג שעושה את הצעד הראשון",
+      profileKey: "first_step",
+      smooveListId: 1136314,
+      guideFile: "guide-1-first-step.pdf",
+      tagline: "יש לכם בסיס - וזה החלק הקשה ביותר. עכשיו השאלה היא איך הופכים אותו למשהו שעובד עבורכם, ולא נח בעו\"ש.",
+      guideTitle: "המדריך לדירה הראשונה: איך הופכים 150,000 ש\"ח לעסקת נדל\"ן ראשונה",
+      guideDesc: "תמהיל מימון, איפה מחפשים עסקאות שמתאימות להון הזה, ואיך מונעים את הטעויות שעולות לרוב המתחילים עשרות אלפי שקלים",
+      whereToInvest: [
+        "אזורים טובים ולא פריפריה רחוקה - דרך הלוואה משלימה מתוכננת היטב",
+        "משחקי נדל\"ן חכמים שלא חושפים בפומבי - פרטים מלאים בפגישה",
+        "לא דירות זולות באזורים בעייתיים - הסיכון גדול מהרווח"
+      ],
+      insights: [
+        { icon: "💡", title: "הבעיה היא לא הסכום - אלא איך חושבים יצירתי", desc: "רוב היועצים יציעו לכם דירה זולה בפריפריה. אנחנו לא מסכימים - הסיכון גדול מהרווח" },
+        { icon: "🔑", title: "הלוואה משלימה חכמה פותחת לכם דלתות", desc: "במקום להישאר תקועים בטווח המחירים שההון מאפשר - להגיע לאזורים שבאמת ייצרו רווח" },
+        { icon: "🎯", title: "יש משחקי נדל\"ן מתקדמים שלא מספרים עליהם", desc: "שיטות רכישה שעובדות בליווי מקצועי - לא בלוחות הציבוריים" }
+      ]
+    };
+  }
+
+  if (capital === "200_350k") {
+    return {
+      emoji: "🚀",
+      name: "הזוג שמוכן להמריא",
+      profileKey: "ready_to_launch",
+      smooveListId: 1136316,
+      guideFile: "guide-2-ready-to-launch.pdf",
+      tagline: "יש לכם הון אמיתי שפותח דלתות. השאלה עכשיו היא לבחור את הדלת הנכונה - כי החלטה אחת היום תקבע את ה-10 שנים הבאות.",
+      guideTitle: "המדריך לזוג הצעיר: 4 דרכים להפוך 250,000 ש\"ח לתיק נדל\"ן צומח",
+      guideDesc: "ניתוח של 4 אסטרטגיות שונות (תזרים, צמיחה, עסקה כפולה, עליית ערך) - איזו מתאימה לכם, ולמה",
+      whereToInvest: [
+        "דירה עם פוטנציאל סחירות באזורי צמיחה דמוגרפית",
+        "תמ\"א או פינוי בינוי - דירה עם פוטנציאל מימוש עתידי",
+        "שתי דירות קטנות במקום אחת - או שותפות בפרויקט יזמי"
+      ],
+      insights: [
+        { icon: "🎯", title: "5 אסטרטגיות שונות עומדות בפניכם", desc: "סחירות, תמ\"א/פינוי בינוי, שתי דירות, שותפות יזמית, או שותפות לדירת פינוי בינוי" },
+        { icon: "⚠️", title: "אזהרה: תזרים חודשי קטן הוא לא הפתרון שלכם", desc: "1,500 ש\"ח לחודש נשמע יפה, אבל לזוגות צעירים זה לרוב הדבר הלא נכון" },
+        { icon: "⏰", title: "הזמן הזה קריטי דווקא עכשיו", desc: "הזדמנויות פינוי בינוי ותמ\"א קרובות לקרות - כל שנת דחייה עולה כסף" }
+      ]
+    };
+  }
+
+  if (capital === "above_350k") {
+    if (knowledge === "advanced") {
+      return {
+        emoji: "🎯",
+        name: "המשקיע הפעיל",
+        profileKey: "active_investor",
+        smooveListId: 1136317,
+        guideFile: "guide-3-active-investor.pdf",
+        tagline: "יש לכם הון משמעותי ואתם לא מחפשים מי שיוביל אתכם - אתם מחפשים שותף לחשיבה שעוזר לכם לזהות את ההזדמנויות הנכונות.",
+        guideTitle: "המדריך למשקיע הפעיל: איך בונים תיק נדל\"ן של 1.5M+ ש\"ח",
+        guideDesc: "אסטרטגיות מתקדמות: עסקאות כפולות, מינוף חכם, פרויקטים יזמיים בקנה מידה קטן-בינוני",
+        whereToInvest: [
+          "נכס בפרויקט תמ\"א או פינוי בינוי שקרוב לקרות",
+          "אזורים עם פוטנציאל מימוש משמעותי ב-4 שנים הקרובות",
+          "נכס אחד מדויק ולא שניים בינוניים - גם אם ההון מאפשר"
+        ],
+        insights: [
+          { icon: "🚀", title: "המקפצה הקרובה: תמ\"א ופינוי בינוי", desc: "יש שכונות שלמות שעומדות בפני מימוש - מי שירכוש בעיתוי הנכון יזכה לקפיצה משמעותית" },
+          { icon: "🎯", title: "נכס אחד מדויק עדיף על שניים בינוניים", desc: "לרוב המשקיעים הצעירים: נכס אחד נכון = הקפיצה האמיתית" },
+          { icon: "💪", title: "החיסכון החודשי שלכם הוא נשק", desc: "1,000-2,000 ש\"ח לחודש משנה את כל המשוואה לתקופת ההמתנה" }
+        ]
+      };
+    } else {
+      return {
+        emoji: "👑",
+        name: "המשקיע האסטרטגי",
+        profileKey: "strategic_investor",
+        smooveListId: 1136318,
+        guideFile: "guide-4-strategic-investor.pdf",
+        tagline: "יש לכם הון משמעותי וברור שאתם מחפשים מי שיעשה את זה נכון - לא לבד. זו לא בושה, זו חוכמה.",
+        guideTitle: "המדריך למשקיע ההון: 4 אסטרטגיות לבניית תיק נדל\"ן של 1.5M+ ש\"ח",
+        guideDesc: "ניתוח השוואתי של אזורי השקעה, מבני מימון אופטימליים, ו-3 case studies מהשטח של משקיעים בפרופיל דומה לכם",
+        whereToInvest: [
+          "פרויקטי תמ\"א ופינוי בינוי שעוברים את הקריטריונים המחמירים שלנו",
+          "אזורים עם פוטנציאל מימוש ב-4 שנים הקרובות - שכבר זיהינו",
+          "ליווי מלא מקצה לקצה: בחירת נכס, מימון, חוזה, ניהול שוכרים"
+        ],
+        insights: [
+          { icon: "🚀", title: "המקפצה הקרובה: תמ\"א ופינוי בינוי", desc: "יש שכונות שעומדות בפני מימוש - אנחנו עושים את חקר השוק בשבילכם" },
+          { icon: "🤝", title: "אנחנו עושים את הכל - אתם רק מקבלים תוצאות", desc: "חקר שוק, בחירת נכס, תמהיל מימון, חוזה, ניהול שוכרים - הצוות שלנו מטפל" },
+          { icon: "👥", title: "צוות אחד שעובד יחד = רווח אמיתי", desc: "יועץ נדל\"ן, יועץ משכנתאות, עו\"ד ושמאי - לא פעולות נפרדות" }
+        ]
+      };
+    }
+  }
+
+  return {
+    emoji: "⚖️",
+    name: "המשקיע המאוזן",
+    tagline: "יש לכם פרופיל מורכב - וזה דווקא יתרון. הצעד הבא הוא להתאים אסטרטגיה לפרופיל הזה.",
+    guideTitle: "המדריך לבניית אסטרטגיית נדל\"ן אישית",
+    guideDesc: "איך מתאימים סוג עסקה, אזור, ומבנה מימון לפרופיל הספציפי שלכם",
+    whereToInvest: [
+      "שילוב של נכס תזרימי + נכס לעליית ערך",
+      "אזורים בצמיחה מתונה - יציבים אבל עם פוטנציאל",
+      "מבנה מימון מאוזן: 50-60% מינוף, לא יותר"
+    ],
+    insights: [
+      { icon: "🎯", title: "אסטרטגיה > טאקטיקה", desc: "רוב המשקיעים מתחילים מ\"איזה נכס לקנות\" - וזו טעות" },
+      { icon: "💰", title: "ההון שלכם פותח דלתות אמיתיות", desc: "השאלה היא רק איך מנצלים אותן נכון" },
+      { icon: "📋", title: "החלטה אחת נכונה = 5-10 שנים של רווח", desc: "החלטה אחת לא נכונה = אותו דבר, רק להיפך" }
+    ]
+  };
+}
+
+let currentStep = 0;
+let answers = {};
+let profile = null;
+const app = document.getElementById('app');
+
+function render() {
+  if (currentStep === 0) renderWelcome();
+  else if (currentStep >= 1 && currentStep <= 11) renderQuestion(currentStep - 1);
+  else if (currentStep === 12) renderLoading();
+  else if (currentStep === 13) renderResult();
+  else if (currentStep === 14) renderForm();
+  else if (currentStep === 15) renderSuccess();
+}
+
+function renderWelcome() {
+  app.innerHTML = `
+    <div class="card">
+      <div class="welcome">
+        <div class="welcome-eyebrow">קיין יזמות נדל"ן · השאלון הרשמי</div>
+        <h1>איך הופכים <span class="highlight">200,000 ש"ח</span><br>לדירה ראשונה להשקעה?</h1>
+        <p class="subtitle">גלו האם עולם הנדל"ן מתאים עבורכם. 11 שאלות קצרות, 90 שניות, ובסוף - תקבלו תכנית עבודה מפורטת שמסבירה לכם בדיוק מה לעשות עם הכסף שלכם, צעד אחר צעד, מותאמת לפרופיל הכלכלי שלכם.</p>
+
+        <div class="stats-row">
+          <div class="stat">
+            <div class="stat-num">970+</div>
+            <div class="stat-label">זוגות שכבר קיבלו</div>
+          </div>
+          <div class="stat">
+            <div class="stat-num">90 שניות</div>
+            <div class="stat-label">בלבד</div>
+          </div>
+          <div class="stat">
+            <div class="stat-num">100%</div>
+            <div class="stat-label">חינם ומותאם</div>
+          </div>
+        </div>
+
+        <div class="social-proof">
+          <div class="avatars">
+            <div class="avatar">ר</div>
+            <div class="avatar">י</div>
+            <div class="avatar">ש</div>
+            <div class="avatar">מ</div>
+          </div>
+          <span>הצטרפו ל-187 זוגות שמילאו השבוע</span>
+        </div>
+
+        <button class="btn-primary" onclick="goToStep(1)">בואו נתחיל →</button>
+        <div class="small-text">בחינם, ללא התחייבות</div>
+      </div>
+    </div>
+  `;
+}
+
+function renderQuestion(idx) {
+  const q = questions[idx];
+  const progress = ((idx + 1) / questions.length) * 100;
+  const selected = answers[q.key] || (q.type === "multi" ? [] : null);
+
+  const optionsHtml = q.options.map(opt => {
+    const isSelected = q.type === "multi"
+      ? (Array.isArray(selected) && selected.includes(opt.value))
+      : (selected === opt.value);
+    return `
+      <button class="option ${isSelected ? 'selected' : ''}" onclick="selectOption('${q.key}', '${opt.value}', '${q.type}')">
+        <span>${opt.text}</span>
+        <div class="option-check"></div>
+      </button>
+    `;
+  }).join('');
+
+  const canProceed = q.type === "multi" ? (Array.isArray(selected) && selected.length > 0) : !!selected;
+
+  app.innerHTML = `
+    <div class="card">
+      <div class="progress-section">
+        <div class="progress-info">
+          <span><span class="step-num">שאלה ${idx + 1}</span> מתוך ${questions.length}</span>
+          <span class="pct">${Math.round(progress)}%</span>
+        </div>
+        <div class="progress-bar">
+          <div class="progress-fill" style="width: ${progress}%"></div>
+        </div>
+      </div>
+
+      <div class="question-block">
+        <div class="question-icon">${q.icon}</div>
+        <h2 class="question-title">${q.title}</h2>
+        <p class="question-hint">${q.hint}</p>
+
+        <div class="options">${optionsHtml}</div>
+
+        <div class="nav-buttons">
+          ${idx > 0 ? '<button class="btn-back" onclick="goToStep(currentStep - 1)">← חזרה</button>' : '<div></div>'}
+          <button class="btn-next" ${canProceed ? '' : 'disabled'} onclick="nextQuestion()">
+            ${idx === questions.length - 1 ? 'סיום וקבלת התוצאה' : 'הבא ←'}
+          </button>
+        </div>
+      </div>
+    </div>
+  `;
+}
+
+function selectOption(key, value, type) {
+  if (type === "multi") {
+    if (!answers[key]) answers[key] = [];
+    const idx = answers[key].indexOf(value);
+    if (idx > -1) answers[key].splice(idx, 1);
+    else answers[key].push(value);
+  } else {
+    answers[key] = value;
+  }
+  render();
+
+  if (type === "single") {
+    setTimeout(() => {
+      if (currentStep >= 1 && currentStep <= 11) nextQuestion();
+    }, 350);
+  }
+}
+
+function nextQuestion() {
+  if (currentStep < 11) {
+    goToStep(currentStep + 1);
+  } else {
+    profile = calculateProfile(answers);
+    goToStep(12);
+  }
+}
+
+function goToStep(step) {
+  currentStep = step;
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+  render();
+  if (step === 12) runLoadingAnimation();
+}
+
+function renderLoading() {
+  app.innerHTML = `
+    <div class="card">
+      <div class="loading-screen">
+        <div class="loading-icon"></div>
+        <h2>בונים את הניתוח שלכם...</h2>
+        <div class="loading-steps">
+          <div class="loading-step active" id="ls0">
+            <div class="loading-step-icon">1</div>
+            <span>מנתחים את התשובות שלכם</span>
+          </div>
+          <div class="loading-step" id="ls1">
+            <div class="loading-step-icon">2</div>
+            <span>מסווגים פרופיל משקיע</span>
+          </div>
+          <div class="loading-step" id="ls2">
+            <div class="loading-step-icon">3</div>
+            <span>מתאימים מדריך אישי</span>
+          </div>
+          <div class="loading-step" id="ls3">
+            <div class="loading-step-icon">4</div>
+            <span>מאתרים הזדמנויות רלוונטיות</span>
+          </div>
+        </div>
+        <div class="loading-tip">
+          <strong>הידעתם?</strong> זוג שמשקיע 200,000 ש"ח בנדל"ן בתשואה ממוצעת של 8% - מקבל אחרי 10 שנים מעל 430,000 ש"ח. אותו כסף בעו"ש - שווה אחרי 10 שנים פחות מ-180,000 בערכים ריאליים.
+        </div>
+      </div>
+    </div>
+  `;
+}
+
+function runLoadingAnimation() {
+  const steps = ['ls0', 'ls1', 'ls2', 'ls3'];
+  steps.forEach((id, i) => {
+    setTimeout(() => {
+      const el = document.getElementById(id);
+      if (el) {
+        el.classList.remove('active');
+        el.classList.add('done');
+        el.querySelector('.loading-step-icon').innerHTML = '✓';
+      }
+      if (steps[i + 1]) {
+        const next = document.getElementById(steps[i + 1]);
+        if (next) next.classList.add('active');
+      }
+    }, (i + 1) * 400);
+  });
+  setTimeout(() => goToStep(13), 1800);
+}
+
+function renderResult() {
+  const insightsHtml = profile.insights.map(ins => `
+    <div class="insight">
+      <div class="insight-icon">${ins.icon}</div>
+      <div class="insight-content">
+        <div class="insight-title">${ins.title}</div>
+        <div class="insight-desc">${ins.desc}</div>
+      </div>
+    </div>
+  `).join('');
+
+  const whereHtml = profile.whereToInvest.map((item, i) => `
+    <div class="where-item">
+      <div class="where-bullet">${i + 1}</div>
+      <div>${item}</div>
+    </div>
+  `).join('');
+
+  app.innerHTML = `
+    <div class="card">
+
+      <div class="result-header">
+        <div class="result-emoji">${profile.emoji}</div>
+        <div class="result-label">הפרופיל שלכם</div>
+        <div class="result-profile">${profile.name}</div>
+        <p class="result-tagline">${profile.tagline}</p>
+      </div>
+
+      <button class="btn-primary scroll-to-form-btn" onclick="scrollToForm()">
+        קבלו את המדריך המלא למייל →
+      </button>
+
+      <div class="insights">${insightsHtml}</div>
+
+      <div class="where-section">
+        <div class="where-header">
+          <div class="where-icon">📍</div>
+          <div class="where-title">מתאים לכם להשקיע ב:</div>
+        </div>
+        <div class="where-list">${whereHtml}</div>
+      </div>
+
+      <div class="guide-preview">
+        <div class="guide-tag">🎁 מותאם לפרופיל שלכם</div>
+        <div class="guide-title">${profile.guideTitle}</div>
+        <div class="guide-desc">${profile.guideDesc}</div>
+      </div>
+
+      <div id="formSection" class="form-section inline-form">
+        <h2>איפה לשלוח לכם את המדריך? 📬</h2>
+        <p class="form-sub">המדריך מותאם אישית לפרופיל "${profile.name}". יישלח תוך דקות.</p>
+
+        <div class="form-fields">
+          <input type="text" class="form-input" id="userName" placeholder="שם מלא" autocomplete="name">
+          <div class="form-error" id="errName">נא למלא שם מלא</div>
+
+          <input type="email" class="form-input" id="userEmail" placeholder="כתובת מייל" autocomplete="email" inputmode="email">
+          <div class="form-error" id="errEmail">נא להזין מייל תקין</div>
+
+          <input type="tel" class="form-input" id="userPhone" placeholder="טלפון נייד (לקבלת תזכורת בוואטסאפ)" autocomplete="tel" inputmode="tel">
+          <div class="form-error" id="errPhone">נא להזין מספר ישראלי תקין</div>
+        </div>
+
+        <div class="checkbox-row">
+          <input type="checkbox" id="terms" checked>
+          <label for="terms">אני מאשר/ת קבלת המדריך והודעות נוספות מקיין יזמות נדל"ן בהתאם <a href="#">לתקנון ומדיניות הפרטיות</a></label>
+        </div>
+
+        <button class="btn-primary" onclick="submitForm()">שלחו לי את המדריך 🚀</button>
+
+        <div class="privacy-note">🔒 הנתונים שלכם מאובטחים ולא יועברו לצד שלישי</div>
+      </div>
+    </div>
+  `;
+}
+
+// פונקציה חדשה - גלילה חלקה לטופס
+function scrollToForm() {
+  const formSection = document.getElementById('formSection');
+  if (formSection) {
+    formSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    setTimeout(() => {
+      const nameInput = document.getElementById('userName');
+      if (nameInput) nameInput.focus();
+    }, 600);
+  }
+}
+
+function renderForm() {
+  // לא בשימוש יותר - הטופס מוצמד למסך התוצאה
+  renderResult();
+  setTimeout(scrollToForm, 100);
+}
+
+function submitForm() {
+  const name = document.getElementById('userName').value.trim();
+  const email = document.getElementById('userEmail').value.trim();
+  const phone = document.getElementById('userPhone').value.trim();
+
+  let valid = true;
+  ['Name', 'Email', 'Phone'].forEach(f => {
+    document.getElementById('err' + f).classList.remove('show');
+    document.getElementById('user' + f).classList.remove('error');
+  });
+
+  if (!name || name.length < 2) {
+    document.getElementById('errName').classList.add('show');
+    document.getElementById('userName').classList.add('error');
+    valid = false;
+  }
+
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailRegex.test(email)) {
+    document.getElementById('errEmail').classList.add('show');
+    document.getElementById('userEmail').classList.add('error');
+    valid = false;
+  }
+
+  const cleanPhone = phone.replace(/[-\s]/g, '');
+  if (!cleanPhone.match(/^05\d{8}$/) && !cleanPhone.match(/^0\d{8,9}$/)) {
+    document.getElementById('errPhone').classList.add('show');
+    document.getElementById('userPhone').classList.add('error');
+    valid = false;
+  }
+
+  if (!valid) return;
+
+  // === נתונים מלאים ששנשלחים למערכת האוטומציה ===
+  const leadData = {
+    // פרטי הלקוח
+    name: name,
+    email: email,
+    phone: phone,
+    // פרטי הפרופיל - האוטומציה משתמשת בזה לבחור איזה מדריך לשלוח
+    profile_name: profile.name,
+    profile_key: profile.profileKey,
+    smoove_list_id: profile.smooveListId,
+    guide_file: profile.guideFile,
+    guide_title: profile.guideTitle,
+    // כל התשובות לשאלון - לשימוש פנימי
+    answers: JSON.stringify(answers),
+    // מקור
+    quiz_source: "rational_v1",
+    timestamp: new Date().toISOString()
+  };
+
+  console.log("Lead captured:", leadData);
+
+  // === שליחה ל-Webhook של Make ===
+  const WEBHOOK_URL = "https://hook.eu2.make.com/c3oofpxsnt37lwatstv4rxf2s0gx4k2z";
+  fetch(WEBHOOK_URL, {
+    method: 'POST',
+    mode: 'no-cors',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(leadData)
+  }).catch(err => console.error("Webhook error:", err));
+
+  goToStep(15);
+}
+
+function renderSuccess() {
+  // === מספרי טלפון ===
+  const whatsappPhone = "972584636908"; // מספר הטלפון של איתי קיין
+
+  // === הודעת ברירת המחדל לוואטסאפ לתיאום שיחה ===
+  const whatsappMessage = encodeURIComponent(`היי! סיימתי את השאלון וקיבלתי פרופיל "${profile.name}". אשמח לתאם שיחת אבחון אישית בהקדם 🙏`);
+  const whatsappUrl = `https://wa.me/${whatsappPhone}?text=${whatsappMessage}`;
+
+  // === הודעה לשיתוף עם חברים ===
+  const quizUrl = window.location.href.split('?')[0].split('#')[0];
+  const shareMessage = encodeURIComponent(`היי! מצאתי שאלון מעולה של קיין יזמות נדל"ן - 11 שאלות קצרות שמראות מה אפשר לעשות עם הכסף שלך בעולם ההשקעות 🏡\n\n${quizUrl}`);
+  const shareUrl = `https://wa.me/?text=${shareMessage}`;
+
+  // === שם קובץ המדריך ===
+  const guideFile = profile.guideFile || 'guide-1-first-step.pdf';
+
+  app.innerHTML = `
+    <div class="card">
+      <div class="success-screen">
+        <div class="success-icon">✓</div>
+        <h2>קיבלנו את הפרטים! 🎉</h2>
+        <p class="success-sub">שלחנו אליכם למייל את המדריך "${profile.guideTitle}". בדקו גם בתיקיית הספאם ליתר ביטחון.</p>
+
+        <div class="bonus-box">
+          <div class="bonus-tag">⭐ הצעד הבא</div>
+          <h3>בקרוב נתקשר אליכם לשיחת אבחון</h3>
+          <p>אנחנו מבינים שאתם נלהבים מהניתוח, באמת - מטורף עד כמה הוא מדויק. אבל בכל זאת, אין כמו מענה אנושי שיתן לכם את ההתאמה הספציפית אליכם.</p>
+          <p>מומחה מהצוות שלנו יתקשר אליכם לשיחת דיוק של השאלון המבוסס על AI, במטרה אחת - <strong>לדייק לכם דרך פעולה מותאמת אישית לעולם ההשקעות והנדל"ן</strong>.</p>
+          <p>תבואו עם שאלות מוכנות - זה <strong>בחינם לגמרי!</strong></p>
+
+          <div class="bonus-meta">
+            <div class="bonus-meta-item">⏱ 10-15 דקות</div>
+            <div class="bonus-meta-item">📞 בטלפון</div>
+            <div class="bonus-meta-item">🎁 ללא עלות</div>
+          </div>
+
+          <div class="small-actions">
+            <a href="${whatsappUrl}" target="_blank" rel="noopener" class="btn-small btn-small-whatsapp">
+              💬 לא יכולים לחכות? קבעו שיחה בוואטסאפ
+            </a>
+            <button class="btn-small btn-small-decline" onclick="declineCall(this)">
+              לא רוצים שנתקשר אליכם? לחצו כאן
+            </button>
+          </div>
+        </div>
+
+        <div class="share-section">
+          <a href="${shareUrl}" target="_blank" rel="noopener" class="btn-share">
+            <span>🤝</span>
+            שתפו את השאלון עם חברים
+          </a>
+        </div>
+
+        <div class="guide-section">
+          <h3 class="guide-section-title">📖 המדריך המלא שלכם</h3>
+          <p class="guide-section-sub">תוכלו לקרוא אותו עכשיו או להוריד למחשב</p>
+          <iframe src="${guideFile}#toolbar=1&navpanes=0&view=FitH" class="pdf-frame-clean" title="המדריך המלא שלכם"></iframe>
+          <a href="${guideFile}" download class="btn-download-link">
+            📥 הורידו את המדריך למחשב
+          </a>
+        </div>
+      </div>
+    </div>
+  `;
+}
+
+function declineCall(btn) {
+  btn.disabled = true;
+  btn.innerHTML = '✓ תודה - לא נתקשר אליכם';
+  btn.classList.add('declined');
+  console.log("User declined phone call");
+}
+
+// === Live Notifications ===
+const liveData = [
+  { name: "רון מ.", initial: "ר", profile: "תכנית עבודה אישית", time: "לפני 2 דקות" },
+  { name: "מיכל ש.", initial: "מ", profile: "המדריך לזוג הצעיר", time: "לפני 4 דקות" },
+  { name: "אורי וטל", initial: "א", profile: "המדריך לדירה הראשונה", time: "לפני 7 דקות" },
+  { name: "ענת ל.", initial: "ע", profile: "תכנית השקעה מותאמת", time: "לפני 9 דקות" },
+  { name: "דניאל ק.", initial: "ד", profile: "המדריך למשקיע ההון", time: "לפני 12 דקות" },
+  { name: "שירי ויובל", initial: "ש", profile: "תכנית עבודה אישית", time: "לפני 15 דקות" },
+  { name: "ליאור ב.", initial: "ל", profile: "המדריך למשקיע הפעיל", time: "לפני 18 דקות" },
+  { name: "נועה ג.", initial: "נ", profile: "המדריך לדירה הראשונה", time: "לפני 22 דקות" },
+  { name: "יעל ואיתי", initial: "י", profile: "תכנית עבודה אישית", time: "לפני 25 דקות" },
+  { name: "תומר ח.", initial: "ת", profile: "המדריך למשקיע ההון", time: "לפני 28 דקות" }
+];
+
+let notifIndex = 0;
+const notifEl = document.getElementById('liveNotif');
+
+function showLiveNotif() {
+  if (currentStep < 1 || currentStep > 13) return;
+
+  const data = liveData[notifIndex % liveData.length];
+  document.getElementById('liveName').textContent = data.name;
+  document.getElementById('liveAvatar').textContent = data.initial;
+  document.getElementById('liveProfile').textContent = data.profile;
+  document.getElementById('liveTime').textContent = data.time;
+
+  notifEl.classList.add('show');
+  setTimeout(() => notifEl.classList.remove('show'), 4500);
+
+  notifIndex++;
+}
+
+// מתחיל אחרי 8 שניות, ואז כל 18-25 שניות
+setTimeout(() => {
+  showLiveNotif();
+  setInterval(() => {
+    showLiveNotif();
+  }, 22000);
+}, 8000);
+
+render();
+</script>
+</body>
+</html>
