@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>איך הופכים 200,000 ש"ח לדירה ראשונה להשקעה? | קיין יזמות נדל"ן</title>
+<title>איך הופכים 200,000 ש"ח לדירה ראשונה להשקעה? | איתי קיין יזמות נדל"ן</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;500;600;700;800&family=Heebo:wght@300;400;500;700;900&display=swap" rel="stylesheet">
@@ -172,9 +172,11 @@
     padding: 44px;
     box-shadow: var(--shadow-lg), 0 0 0 1px rgba(255, 255, 255, 0.1);
     color: var(--gray-700);
-    animation: cardEntry 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
     position: relative;
     overflow: hidden;
+  }
+  .card.entering {
+    animation: cardEntry 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
   }
 
   .card::before {
@@ -434,6 +436,24 @@
     font-size: 14px;
     color: var(--gray-500);
     margin-bottom: 30px;
+  }
+  .multi-hint {
+    background: linear-gradient(135deg, rgba(20, 184, 166, 0.10) 0%, rgba(167, 139, 250, 0.10) 100%);
+    border: 1.5px solid rgba(20, 184, 166, 0.30);
+    border-radius: 12px;
+    padding: 12px 16px;
+    margin: -10px 0 24px 0;
+    font-size: 14px;
+    color: var(--navy-deep);
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    line-height: 1.5;
+  }
+  .multi-hint-icon {
+    font-size: 20px;
+    flex-shrink: 0;
   }
   .options {
     display: flex;
@@ -829,6 +849,62 @@
   .guide-desc { font-size: 14px; opacity: 0.9; position: relative; line-height: 1.6; }
 
   /* === טופס === */
+  /* === Team Section === */
+  .team-section {
+    margin: 36px 0 28px 0;
+    padding: 28px 22px 24px 22px;
+    background: linear-gradient(135deg, rgba(167, 139, 250, 0.06) 0%, rgba(20, 184, 166, 0.06) 100%);
+    border: 1.5px solid rgba(167, 139, 250, 0.20);
+    border-radius: 22px;
+    text-align: center;
+  }
+  .team-section-header { margin-bottom: 20px; }
+  .team-tag {
+    display: inline-block;
+    background: linear-gradient(135deg, var(--purple-light) 0%, var(--teal) 100%);
+    color: white;
+    padding: 6px 16px;
+    border-radius: 999px;
+    font-size: 13px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    letter-spacing: 0.3px;
+  }
+  .team-title {
+    font-size: 22px;
+    color: var(--navy-deep);
+    font-weight: 800;
+    margin: 0 0 8px 0;
+    line-height: 1.3;
+  }
+  .team-sub {
+    font-size: 14px;
+    color: var(--gray-700);
+    margin: 0;
+    line-height: 1.55;
+    font-weight: 500;
+  }
+  .team-photo-wrap {
+    position: relative;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 12px 28px rgba(15, 23, 42, 0.18), 0 2px 6px rgba(15, 23, 42, 0.08);
+    aspect-ratio: 4/3;
+    background: var(--gray-100);
+  }
+  .team-photo {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+  @media (max-width: 600px) {
+    .team-section { padding: 22px 16px 20px 16px; margin: 28px 0 20px 0; }
+    .team-title { font-size: 19px; }
+    .team-sub { font-size: 13px; }
+  }
+
   .form-section { text-align: center; }
   .form-section h2 {
     font-family: 'Heebo', sans-serif;
@@ -1302,7 +1378,7 @@
   <div class="logo-bar">
     <div class="logo">
       <div class="logo-icon">ק</div>
-      <div>קיין יזמות נדל"ן</div>
+      <div>איתי קיין יזמות נדל"ן</div>
     </div>
   </div>
 
@@ -1570,6 +1646,9 @@ function calculateProfile(answers) {
   return {
     emoji: "⚖️",
     name: "המשקיע המאוזן",
+    profileKey: "balanced",
+    smooveListId: 1136317,
+    guideFile: "guide-3-active-investor.pdf",
     tagline: "יש לכם פרופיל מורכב - וזה דווקא יתרון. הצעד הבא הוא להתאים אסטרטגיה לפרופיל הזה.",
     guideTitle: "המדריך לבניית אסטרטגיית נדל\"ן אישית",
     guideDesc: "איך מתאימים סוג עסקה, אזור, ומבנה מימון לפרופיל הספציפי שלכם",
@@ -1604,7 +1683,7 @@ function renderWelcome() {
   app.innerHTML = `
     <div class="card">
       <div class="welcome">
-        <div class="welcome-eyebrow">קיין יזמות נדל"ן · השאלון הרשמי</div>
+        <div class="welcome-eyebrow">איתי קיין יזמות נדל"ן · השאלון הרשמי</div>
         <h1>איך הופכים <span class="highlight">200,000 ש"ח</span><br>לדירה ראשונה להשקעה?</h1>
         <p class="subtitle">גלו האם עולם הנדל"ן מתאים עבורכם. 11 שאלות קצרות, 90 שניות, ובסוף - תקבלו תכנית עבודה מפורטת שמסבירה לכם בדיוק מה לעשות עם הכסף שלכם, צעד אחר צעד, מותאמת לפרופיל הכלכלי שלכם.</p>
 
@@ -1633,7 +1712,7 @@ function renderWelcome() {
           <span>הצטרפו ל-187 זוגות שמילאו השבוע</span>
         </div>
 
-        <button class="btn-primary" onclick="goToStep(1)">בואו נתחיל →</button>
+        <button class="btn-primary" onclick="goToStep(1)">קבלו את האבחון האישי שלכם ←</button>
         <div class="small-text">בחינם, ללא התחייבות</div>
       </div>
     </div>
@@ -1650,7 +1729,7 @@ function renderQuestion(idx) {
       ? (Array.isArray(selected) && selected.includes(opt.value))
       : (selected === opt.value);
     return `
-      <button class="option ${isSelected ? 'selected' : ''}" onclick="selectOption('${q.key}', '${opt.value}', '${q.type}')">
+      <button class="option ${isSelected ? 'selected' : ''}" onclick="selectOption('${q.key}', '${opt.value}', '${q.type}', this)">
         <span>${opt.text}</span>
         <div class="option-check"></div>
       </button>
@@ -1676,6 +1755,8 @@ function renderQuestion(idx) {
         <h2 class="question-title">${q.title}</h2>
         <p class="question-hint">${q.hint}</p>
 
+        ${q.type === "multi" ? '<div class="multi-hint"><span class="multi-hint-icon">✅</span><span>אפשר לסמן <strong>יותר מתשובה אחת</strong> — לאחר הבחירה לחצו <strong>"הבא ←"</strong> להמשך</span></div>' : ''}
+
         <div class="options">${optionsHtml}</div>
 
         <div class="nav-buttons">
@@ -1689,21 +1770,28 @@ function renderQuestion(idx) {
   `;
 }
 
-function selectOption(key, value, type) {
+function selectOption(key, value, type, btnEl) {
   if (type === "multi") {
     if (!answers[key]) answers[key] = [];
     const idx = answers[key].indexOf(value);
     if (idx > -1) answers[key].splice(idx, 1);
     else answers[key].push(value);
+    // Multi: toggle .selected on this option + update Next button enabled state — no full render
+    if (btnEl) btnEl.classList.toggle('selected');
+    const nextBtn = document.querySelector('.btn-next');
+    if (nextBtn) {
+      const hasAny = Array.isArray(answers[key]) && answers[key].length > 0;
+      if (hasAny) nextBtn.removeAttribute('disabled');
+      else nextBtn.setAttribute('disabled', 'disabled');
+    }
   } else {
     answers[key] = value;
-  }
-  render();
-
-  if (type === "single") {
+    // Single: just toggle .selected visually — DON'T full-render, avoids card jump
+    document.querySelectorAll('.option').forEach(el => el.classList.remove('selected'));
+    if (btnEl) btnEl.classList.add('selected');
     setTimeout(() => {
       if (currentStep >= 1 && currentStep <= 11) nextQuestion();
-    }, 350);
+    }, 280);
   }
 }
 
@@ -1717,9 +1805,20 @@ function nextQuestion() {
 }
 
 function goToStep(step) {
+  const stepChanged = currentStep !== step;
   currentStep = step;
-  window.scrollTo({ top: 0, behavior: 'smooth' });
   render();
+  if (stepChanged) {
+    const card = document.querySelector('.card');
+    if (card) {
+      // Trigger entry animation only when step actually changes
+      card.classList.add('entering');
+    }
+    // Only scroll if user actually scrolled down — avoids jump when already at top
+    if (window.scrollY > 20) {
+      window.scrollTo({ top: 0, behavior: 'instant' in window ? 'instant' : 'auto' });
+    }
+  }
   if (step === 12) runLoadingAnimation();
 }
 
@@ -1822,6 +1921,17 @@ function renderResult() {
         <div class="guide-desc">${profile.guideDesc}</div>
       </div>
 
+      <div class="team-section">
+        <div class="team-section-header">
+          <div class="team-tag">👋 הכירו את הצוות שלנו</div>
+          <h3 class="team-title">אנחנו כאן בשבילכם</h3>
+          <p class="team-sub">צוות מקצועי, נגיש ומחויב להצלחה שלכם בעולם ההשקעות והנדל"ן</p>
+        </div>
+        <div class="team-photo-wrap">
+          <img src="team.jpg" alt="צוות איתי קיין יזמות נדל&quot;ן" class="team-photo" loading="lazy">
+        </div>
+      </div>
+
       <div id="formSection" class="form-section inline-form">
         <h2>איפה לשלוח לכם את המדריך? 📬</h2>
         <p class="form-sub">המדריך מותאם אישית לפרופיל "${profile.name}". יישלח תוך דקות.</p>
@@ -1839,7 +1949,7 @@ function renderResult() {
 
         <div class="checkbox-row">
           <input type="checkbox" id="terms" checked>
-          <label for="terms">אני מאשר/ת קבלת המדריך והודעות נוספות מקיין יזמות נדל"ן בהתאם <a href="#">לתקנון ומדיניות הפרטיות</a></label>
+          <label for="terms">אני מאשר/ת קבלת המדריך והודעות נוספות מאיתי קיין יזמות נדל"ן בהתאם <a href="#">לתקנון ומדיניות הפרטיות</a></label>
         </div>
 
         <button class="btn-primary" onclick="submitForm()">שלחו לי את המדריך 🚀</button>
@@ -1892,7 +2002,9 @@ function submitForm() {
     valid = false;
   }
 
-  const cleanPhone = phone.replace(/[-\s]/g, '');
+  // מנקים כל תו שאינו ספרה (כולל תווי כיווניות נסתרים שמקלדות iOS מזריקות ב-RTL)
+  // ומנרמלים קידומת בינלאומית 972 לאפס מוביל.
+  const cleanPhone = phone.replace(/\D/g, '').replace(/^972/, '0');
   if (!cleanPhone.match(/^05\d{8}$/) && !cleanPhone.match(/^0\d{8,9}$/)) {
     document.getElementById('errPhone').classList.add('show');
     document.getElementById('userPhone').classList.add('error');
@@ -1901,18 +2013,62 @@ function submitForm() {
 
   if (!valid) return;
 
+  // === מיפוי קודים → טקסט קריא + סכום מספרי (לשדות הון/הכנסה ב-Origami) ===
+  const CAPITAL_TEXT = {
+    "100_200k": "פחות מ-150,000 ש\"ח",
+    "150_250k": "150,000 - 250,000 ש\"ח",
+    "200_350k": "250,000 - 350,000 ש\"ח",
+    "above_350k": "מעל 350,000 ש\"ח"
+  };
+  const CAPITAL_AMOUNT = {
+    "100_200k": 100000,
+    "150_250k": 150000,
+    "200_350k": 250000,
+    "above_350k": 350000
+  };
+  const MONTHLY_SAVING_TEXT = {
+    "under_1k": "עד 1,000 ש\"ח",
+    "1_2k": "1,000 - 2,000 ש\"ח",
+    "2_35k": "2,000 - 3,500 ש\"ח",
+    "above_35k": "מעל 3,500 ש\"ח"
+  };
+  const MONTHLY_SAVING_AMOUNT = {
+    "under_1k": 500,
+    "1_2k": 1000,
+    "2_35k": 2000,
+    "above_35k": 3500
+  };
+  const capitalRaw = answers.capital || "";
+  const savingRaw = answers.monthlySaving || "";
+
+  // === נירמול טלפון ל-international format (Israel +972) ===
+  // 0501234567 → +972501234567 | 501234567 → +972501234567
+  let phoneClean = phone.replace(/[^0-9]/g, '');
+  if (phoneClean.startsWith('972')) phoneClean = phoneClean.substring(3);
+  if (phoneClean.startsWith('0')) phoneClean = phoneClean.substring(1);
+  const phoneIntl = "+972" + phoneClean;
+
   // === נתונים מלאים ששנשלחים למערכת האוטומציה ===
   const leadData = {
     // פרטי הלקוח
     name: name,
     email: email,
     phone: phone,
+    phone_intl: phoneIntl,
+    phone_no_zero: phoneClean,
     // פרטי הפרופיל - האוטומציה משתמשת בזה לבחור איזה מדריך לשלוח
     profile_name: profile.name,
     profile_key: profile.profileKey,
     smoove_list_id: profile.smooveListId,
     guide_file: profile.guideFile,
     guide_title: profile.guideTitle,
+    // === הון עצמי + חיסכון חודשי - לליד באוריגמי ===
+    capital: capitalRaw,
+    capital_text: CAPITAL_TEXT[capitalRaw] || capitalRaw || "לא צוין",
+    capital_amount: CAPITAL_AMOUNT[capitalRaw] || 0,
+    monthly_saving: savingRaw,
+    monthly_saving_text: MONTHLY_SAVING_TEXT[savingRaw] || savingRaw || "לא צוין",
+    monthly_saving_amount: MONTHLY_SAVING_AMOUNT[savingRaw] || 0,
     // כל התשובות לשאלון - לשימוש פנימי
     answers: JSON.stringify(answers),
     // מקור
@@ -1922,16 +2078,41 @@ function submitForm() {
 
   console.log("Lead captured:", leadData);
 
+  // שמירה גלובלית - לשימוש בכפתור WhatsApp במסך התודה
+  window.__lastLeadData = leadData;
+
   // === שליחה ל-Webhook של Make ===
+  // הערה: שולחים כ-form-urlencoded ולא JSON כי בfetch עם mode:no-cors
+  // הדפדפן מסיר את Content-Type:application/json ומחליף ב-text/plain,
+  // וזה גורם ל-Make לא לפרק את ה-body לשדות נפרדים. form-urlencoded עובד תמיד.
   const WEBHOOK_URL = "https://hook.eu2.make.com/c3oofpxsnt37lwatstv4rxf2s0gx4k2z";
+  const formBody = new URLSearchParams();
+  Object.entries(leadData).forEach(([k, v]) => formBody.append(k, typeof v === 'object' ? JSON.stringify(v) : String(v ?? '')));
   fetch(WEBHOOK_URL, {
     method: 'POST',
     mode: 'no-cors',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify(leadData)
+    body: formBody
   }).catch(err => console.error("Webhook error:", err));
 
   goToStep(15);
+}
+
+// === קליק על "קבעו שיחה בוואטסאפ" - יוצר ליד רגיל באוריגמי עם הערה ===
+function notifyWhatsAppClick() {
+  const data = window.__lastLeadData;
+  if (!data) return true;
+  const WHATSAPP_WEBHOOK_URL = "https://hook.eu2.make.com/9ai4psyr2xoqus7ok1occ8zju6wokjd7";
+  try {
+    const payload = { ...data, action: 'whatsapp_clicked', clicked_at: new Date().toISOString() };
+    const formBody = new URLSearchParams();
+    Object.entries(payload).forEach(([k, v]) => formBody.append(k, typeof v === 'object' ? JSON.stringify(v) : String(v ?? '')));
+    fetch(WHATSAPP_WEBHOOK_URL, {
+      method: 'POST',
+      mode: 'no-cors',
+      body: formBody
+    }).catch(err => console.error("WhatsApp webhook error:", err));
+  } catch (e) { console.error(e); }
+  return true;
 }
 
 function renderSuccess() {
@@ -1944,7 +2125,7 @@ function renderSuccess() {
 
   // === הודעה לשיתוף עם חברים ===
   const quizUrl = window.location.href.split('?')[0].split('#')[0];
-  const shareMessage = encodeURIComponent(`היי! מצאתי שאלון מעולה של קיין יזמות נדל"ן - 11 שאלות קצרות שמראות מה אפשר לעשות עם הכסף שלך בעולם ההשקעות 🏡\n\n${quizUrl}`);
+  const shareMessage = encodeURIComponent(`היי! מצאתי שאלון מעולה של איתי קיין יזמות נדל"ן - 11 שאלות קצרות שמראות מה אפשר לעשות עם הכסף שלך בעולם ההשקעות 🏡\n\n${quizUrl}`);
   const shareUrl = `https://wa.me/?text=${shareMessage}`;
 
   // === שם קובץ המדריך ===
@@ -1971,7 +2152,7 @@ function renderSuccess() {
           </div>
 
           <div class="small-actions">
-            <a href="${whatsappUrl}" target="_blank" rel="noopener" class="btn-small btn-small-whatsapp">
+            <a href="${whatsappUrl}" target="_blank" rel="noopener" class="btn-small btn-small-whatsapp" onclick="notifyWhatsAppClick()">
               💬 לא יכולים לחכות? קבעו שיחה בוואטסאפ
             </a>
             <button class="btn-small btn-small-decline" onclick="declineCall(this)">
@@ -2048,6 +2229,11 @@ setTimeout(() => {
 }, 8000);
 
 render();
+// Apply entry animation to the very first card load
+requestAnimationFrame(() => {
+  const card = document.querySelector('.card');
+  if (card) card.classList.add('entering');
+});
 </script>
 </body>
 </html>
